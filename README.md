@@ -1,4 +1,4 @@
-# * *Travel Guru**
+# **Travel Guru**
 
 A dynamic travel booking website built with React, Bootstrap, and Tailwind CSS.
 
@@ -17,27 +17,27 @@ A dynamic travel booking website built with React, Bootstrap, and Tailwind CSS.
 ## **Technologies**
 
 - React
+- React-Bootstrap
 - Bootstrap 5
 - Tailwind CSS
 - JavaScript
 - HTML
 - CSS
+- Motion-Animation
 - Firebase
 
 ## **Usage**
 
-1. Visit the live demo: [Travel Guru](https://www.travelguru.com/)
+1. Visit the live demo: [Travel Guru](https://travel-guru-12.netlify.app/destinations)
 2. Create an account or sign in with Google.
 3. Browse available tours and book your next adventure!
 
 ### **Note**
 
-All Tailwind classes are prefixed with `tw-`.
-
-## **Contributing**
-
-Contributions are welcome! Please submit a pull request.
+All Tailwind classes are prefixed with `tw-`
+For example: tw-py-12
 
 ## **License**
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
+**Developed by Hasan**
