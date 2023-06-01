@@ -37,7 +37,4 @@ A dynamic travel booking website built with React, Bootstrap, and Tailwind CSS.
 All Tailwind classes are prefixed with `tw-`
 For example: tw-py-12
 
-## **License**
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-**Developed by Hasan**
+©2023 Developed by Ahmod Hasan
