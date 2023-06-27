@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 const ContactUsPage = () => {
   const {
@@ -7,9 +8,11 @@ const ContactUsPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/home')
     // Handle form submission logic here
   };
 
@@ -17,7 +20,7 @@ const ContactUsPage = () => {
     <div className=" tw-min-h-screen tw-pt-24 tw-pb-6 tw-px-4 sm:tw-px-6 lg:tw-px-8">
       <div className="tw-max-w-lg tw-mx-auto tw-bg-white tw-rounded-lg tw-shadow-md tw-overflow-hidden md:tw-max-w-3xl">
         <div className="md:tw-flex">
-         
+
           {/* Contact Form */}
           <div className="md:tw-w-1/2 tw-px-6 tw-py-8">
             {/* Title */}
@@ -75,7 +78,7 @@ const ContactUsPage = () => {
               <div className="tw-mt-6">
                 <button
                   type="submit"
-                 className='btn btn-warning'  >
+                  className='btn btn-warning'  >
                   Submit
                 </button>
               </div>
