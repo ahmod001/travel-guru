@@ -11,6 +11,7 @@ import { createContext, useState } from 'react';
 import Search from './Components/Search/Search';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import LogInMain from './Components/LogIn.main/LogInMain';
+import Contact from './Components/Contact/Contact';
 
 export const User = createContext()
 
@@ -31,11 +32,13 @@ function App() {
         <NavbarComponent />
         <Routes>
           <Route path='/' element={<Destinations />} />
-          <Route path='/destinations' element={<Destinations />} />
+          <Route path='/home' element={<Destinations />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/destination/:destinationId' element={<Booking />} />
           <Route path='/login' element={<LogInMain />} />
-          <Route path='/destination/search' element={<PrivateRoute><Search /></PrivateRoute>
-          } />
+          <Route path='/destination/search' element={<PrivateRoute>
+            <Search />
+          </PrivateRoute>} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer />

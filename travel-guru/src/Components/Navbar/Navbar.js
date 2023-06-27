@@ -31,53 +31,37 @@ const NavbarComponent = () => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="" variant="light" fixed='top' className='tw-bg-black/25 tw-backdrop-blur-md py-1'>
-                <Container className='xl:tw-space-x-10 lg:tw-space-x-5 md:tw-text-center'>
-
+                <Container className=''>
                     {/* Brand logo */}
-                    <Navbar.Brand href='/destinations'>
+                    <Navbar.Brand href='/home'>
                         <img src='/logo192.png' className='tw-max-h-12 tw-brightness-200 tw-invert tw-contrast-200' alt="Logo" />
                     </Navbar.Brand>
-                    <Navbar.Toggle className='text-light' aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className='xl:tw-space-x-14 lg:tw-space-x-10'>
+                    <Navbar.Toggle className='text-light ms-auto' aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse className='mt-lg-0 flex tw-justify-end mt-3' id="responsive-navbar-nav">
+                            <Nav className='xl:tw-space-x-6 lg:tw-space-x-8'>
+                                {/* Links */}
+                                <Nav.Link href='/home'
+                                    className=' text-light  tw-text-base my-auto fw-semibold active:tw-bg-black/50 rounded-3'>Home</Nav.Link>
+                                <Nav.Link href='/contact-us'
+                                className='tw-text-base text-light  my-auto fw-semibold active:tw-bg-black/50 rounded-3'>Contact us</Nav.Link>
 
-                            {/* Searchbar */}
-                            <Nav.Link className='xl:tw-w-96 lg:tw-w-90 '>
-                                <input onChange={searchBarHandle}
-                                    className='form-control'
-                                    type="search"
-                                    placeholder="Find destination"
-                                    aria-label="Search"
-                                    list='search-suggestions' />
-                            </Nav.Link>
-                            <datalist id="search-suggestions">
-                                <option value="Sreemongle" />
-                                <option value="Shundorbon" />
-                                <option value="Sajek" />
-                            </datalist>
+                                <Nav.Link >
+                                    { /* Log out Button*/}
+                                    {userLoggedIn ?
+                                        <motion.div>
+                                            <Button
+                                                onClick={logOutHandler}
+                                                className='fw-semibold text-nowrap' variant="warning">Log out</Button>
+                                        </motion.div>
 
-                            {/* Links */}
-                            <Nav.Link href='/destinations'
-                                className=' text-light  tw-text-base my-auto fw-semibold active:tw-bg-black/50 rounded-3'>Destinations</Nav.Link>
-                            <Nav.Link disabled className='tw-text-base text-light my-auto fw-semibold active:tw-bg-black/50 rounded-3'>Blog</Nav.Link>
-                            <Nav.Link disabled className='tw-text-base text-light  my-auto fw-semibold  active:tw-bg-black/50 rounded-3'>Contact</Nav.Link>
+                                        /* Log in Button*/
+                                        : <Button onClick={() => { navigate('/logIn') }}
+                                            className='fw-semibold' variant="warning">Log in
+                                        </Button>}
 
-                            <Nav.Link >
-                                { /* Log out Button*/}
-                                {userLoggedIn ? <motion.div>
-                                    <Button
-                                        onClick={logOutHandler}
-                                        className='fw-semibold text-nowrap' variant="warning">Log out</Button>
-                                </motion.div>
-
-                                    /* Log in Button*/
-                                    : <Button onClick={() => { navigate('/logIn') }}
-                                        className='fw-semibold' variant="warning">Log in</Button>
-                                }
-
-                            </Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
+                                </Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
