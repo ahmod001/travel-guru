@@ -1,3 +1,4 @@
+![travel-guru](https://github.com/ahmod001/travel-guru/assets/121039395/bdf2fb64-da1a-4804-89d6-c4e5e9a8e25c)
 # Travel Guru
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
