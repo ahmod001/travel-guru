@@ -13,7 +13,6 @@ const ContactUsPage = () => {
   const onSubmit = (data) => {
     console.log(data);
     navigate('/home')
-    // Handle form submission logic here
   };
 
   return (
